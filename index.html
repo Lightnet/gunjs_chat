@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta name="description" content="">
+    <!--<link id="favicon" rel="icon" href="" type="image/x-icon">-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+    <script src="/gun.js"></script>
+
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/mix.js"></script>
+    -->
+    <!-- RAD/LEX -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/radix.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/gun/lib/radisk.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/gun/lib/store.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/rindexed.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/path.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/list.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/promise.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/lib/then.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>  
+    -->
+    
+  </head>
+  <body>
+      <label>Nodejs http with Gun.js</label>
+      <a href="/client_chat_RAD.html">Prototpe Test</a>
+
+        <div id="publicchat">
+          Public Chat
+          <div id="publicchatlist" style="background-color: darkgray;overflow-y: scroll;">
+            Not Init.
+          </div>
+          <div id="publicchatarea"style="height:22px;width:100%">
+            <input id="inputpublicchat" value="" placeholder="type here and press enter">
+          </div>
+        </div>
+
+        <div id="Modal" class="modal">
+          <div id="dialog" class="modal-content">
+            <p>Message:<label id="dialogmessage">None</label></p>
+            <button id="btndialogokay">Okay</button>
+          </div>
+        </div>
+
+        <script src="/client_chat.js" defer></script>
+    <footer>
+    </footer>
+  </body>
+</html>
