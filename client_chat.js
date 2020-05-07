@@ -39,28 +39,14 @@ function scrollPublicMessage(){
 
 var userid = Gun.text.random(10);
 
-
 $("#inputpublicchat").keyup(async function(e) {
     if(e.key == "Enter"){
         console.log("Enter");
-        //let user = gun.user();
-        //if(!user.is){ return }//check if user exist
+
         let msg = ($('#inputpublicchat').val() || '').trim();
         if(!msg) return;//check if not id empty
-        
-        //let encmsg = await SEA.work("public","chat");//encrypttion key default?
-        //console.log(encmsg);
-        //let enc = await SEA.encrypt(msg,encmsg);
-        //console.log(enc);
-        //let who = await user.get('alias').then();
         let who = userid+"test";
-        //console.log(who);
-        //console.log(typeof enc)
-        //enc = window.btoa(enc);
-        //gun.get('chat').get(timestamp()).put({
-            //alias:who,
-            //message:msg //enc
-        //});
+
         let rng = Gun.text.random(10);
         gun.get('chat').get(rng).put({
             alias:who,
@@ -74,16 +60,12 @@ $("#inputpublicchat").keyup(async function(e) {
 async function InitChat(){
     console.log("Init Chat...")
     $('#publicchatlist').empty();
-    //let encmsg = await SEA.work("public","chat"); //encrypttion key default?
     async function qcallback(data,key){
         console.log('incoming messages...')
         //console.log("key",key);
         console.log("data",data);
         if(data == null)return;
         if(data.message != null){
-            //let message = window.atob(data.message);
-            //console.log(message);
-            //let dec = await SEA.decrypt(message,encmsg);
             let dec = data.message;
             //console.log(dec)
             if(dec!=null){
@@ -110,9 +92,9 @@ async function InitChat(){
     //gunchat.get({'.': {'*': timestring},'%': 50000}).map().once(qcallback);
     gunchat.map().once(qcallback);
 
-    gunchat.map().on((data,key)=>{
-        console.log(data);
-    });
+    //gunchat.map().on((data,key)=>{
+        //console.log(data);
+    //});
 }
 
 function PublicChatResize(){
@@ -128,6 +110,3 @@ $(window).resize(function() {
 
 InitChat();
 PublicChatResize();
-
-
-
